@@ -29,8 +29,23 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	git commit -a -m
 	git push
 	git pull
+	git branch <nome branch>
 	git checkout <branch name> (muda de branch)
 	git merge <branch a> <branch b>
 
+- Spring annotations
+	@Controller - fala que uma classe eh um controller de paths (requests) da web app
+	@Service - fala que uma classe devolve informacoes 
+	@Repository - fala que uma classe eh um DAO
+	@Componenet - quando uma classe nao eh nenhuma das outras acima.
+	@Autowired - quando o objeto de uma classe eh injetado pelo Spring
+	@GetMapping e @RequestParam
+	
+	
 - curiosidades
-	a) Maven Mojo -> criador de plugins do Maven, criador de goals	
+	a) Maven Mojo -> criador de plugins do Maven, criador de goals
+	b) Tipos de data:
+		Date
+		Calendar
+		DataTimeApi (Duration, LocalDate, LocalTime, LocalDateTime)
+	c) SpringData -> tem todos os metodos de CRUD prontos

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -42,16 +43,16 @@ public class SessaoController {
 	
 	@PostMapping("/admin/sessao")
 	@Transactional
-	public ModelAndView salva(@Valid SessaoForm sessaoForm, BindingResult result){
+	public ModelAndView salva(@Valid SessaoForm form, BindingResult result){
 	
 		if(result.hasErrors()){
-			return form(sessaoForm.getSalaId(), sessaoForm);
+			return form(form.getSalaId(), form);
 		}
 		
-		Sessao sessao = sessaoForm.toSessao(this.salaDao, this.filmeDao);
+		Sessao sessao = form.toSessao(this.salaDao, this.filmeDao);
 		this.sessaoDao.salvar(sessao);
 		
-		return new ModelAndView("redirect:/admin/sala/" + sessaoForm.getSalaId() + "/sessoes");
+		return new ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sessoes");
 	}
 	
 }

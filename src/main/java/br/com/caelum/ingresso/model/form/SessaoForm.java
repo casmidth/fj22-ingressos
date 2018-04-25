@@ -25,7 +25,8 @@ public class SessaoForm {
 	private LocalTime horario;
 	
 	public Sessao toSessao(SalaDao saladao, FilmeDao filmedao){
-		return new Sessao(this.horario, filmedao.findOne(filmeId), saladao.findOne(salaId));
+		return 
+				new Sessao(this.horario, filmedao.findOne(filmeId), saladao.findOne(salaId));
 	}
 
 	public Integer getId() {

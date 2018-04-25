@@ -40,7 +40,12 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	@Componenet - quando uma classe nao eh nenhuma das outras acima.
 	@Autowired - quando o objeto de uma classe eh injetado pelo Spring
 	@GetMapping e @RequestParam
-	
+
+- Hibernate
+	@Entity -> dizendo pro Hibernate que a classe eh uma entidade de banco
+	@ManyToOne -> indica cardinalidade em um objeto instanciado dentro do outro
+	@ID @GeneratedValues(Strategy=IDENTITY)
+	@DateTimeFormat(pattern="hh:mm")
 	
 - curiosidades
 	a) Maven Mojo -> criador de plugins do Maven, criador de goals
@@ -49,3 +54,4 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 		Calendar
 		DataTimeApi (Duration, LocalDate, LocalTime, LocalDateTime)
 	c) SpringData -> tem todos os metodos de CRUD prontos
+	d) DTO -> data transfer object, previde ataques na web (mass assignment)

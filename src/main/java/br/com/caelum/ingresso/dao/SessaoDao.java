@@ -19,7 +19,7 @@ public class SessaoDao {
 	private EntityManager manager;
 	
 	public void salvar(Sessao sessao){
-		manager.persist(sessao);
+		manager.persist(sessao); 
 	}
 	
 	public List<Sessao> buscaSessoesDaSala(Sala sala){

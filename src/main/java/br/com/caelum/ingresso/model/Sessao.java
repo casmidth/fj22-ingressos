@@ -10,10 +10,10 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Sessao {
-
+ 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer sessaoId;
+	private Integer id;
 	private LocalTime horario;
 	@ManyToOne
 	private Filme filme;
@@ -36,11 +36,11 @@ public class Sessao {
 	}
 	
 	public Integer getId() {
-		return sessaoId;
+		return id;
 	}
 	
-	public void setId(Integer sessaoId) {
-		this.sessaoId = sessaoId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	public LocalTime getHorario() {

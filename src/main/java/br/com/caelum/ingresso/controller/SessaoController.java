@@ -33,7 +33,6 @@ public class SessaoController {
 	public ModelAndView form(@RequestParam("salaId") Integer salaId, SessaoForm form){
 		
 		form.setSalaId(salaId);
-		
 		ModelAndView mav = new ModelAndView("sessao/sessao");
 		mav.addObject("sala", this.salaDao.findOne(salaId));
 		mav.addObject("filmes", this.filmeDao.findAll());

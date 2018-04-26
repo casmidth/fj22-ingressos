@@ -51,7 +51,7 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	Unitario -> testa via 3A ou GWT, quando eh testado uma pequena unidade (Ex um metodo) por vez
 	Integracao -> quando eh testada funcionalidades externas da applicacao, tipo conexao com banco
 	Aceitacao -> teste manual feito por humanos (Selenium)
-	
+		
 - Design Patterns
 	Strategy-> implementa varias funcoes (classes) que podem ser extendidas, mas mantem a funcao que as usa fixa passando uma interface, cuja as classes extensivas implementam
 	

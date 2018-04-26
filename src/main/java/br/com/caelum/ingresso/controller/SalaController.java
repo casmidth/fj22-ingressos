@@ -16,7 +16,7 @@ import java.util.Optional;
 /**
  * Created by nando on 03/03/17.
  */
-@Controller
+@Controller 
 public class SalaController {
 
     @Autowired
@@ -70,7 +70,7 @@ public class SalaController {
 
         ModelAndView view = new ModelAndView("sessao/lista");
         view.addObject("sala", sala);
-        view.addObject("sessao", sessaoDao.buscaSessoesDaSala(sala));
+        view.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
  
         return view;
     }

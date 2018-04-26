@@ -47,6 +47,11 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	@ID @GeneratedValues(Strategy=IDENTITY)
 	@DateTimeFormat(pattern="hh:mm")
 	
+- Testes
+	Unitario -> testa via 3A ou GWT, quando eh testado uma pequena unidade (Ex um metodo) por vez
+	Integracao -> quando eh testada funcionalidades externas da applicacao, tipo conexao com banco
+	Aceitacao -> teste manual feito por humanos (Selenium)
+	
 - curiosidades
 	a) Maven Mojo -> criador de plugins do Maven, criador de goals
 	b) Tipos de data:

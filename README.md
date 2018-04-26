@@ -52,6 +52,9 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	Integracao -> quando eh testada funcionalidades externas da applicacao, tipo conexao com banco
 	Aceitacao -> teste manual feito por humanos (Selenium)
 	
+- Design Patterns
+	Strategy-> implementa varias funcoes (classes) que podem ser extendidas, mas mantem a funcao que as usa fixa passando uma interface, cuja as classes extensivas implementam
+	
 - curiosidades
 	a) Maven Mojo -> criador de plugins do Maven, criador de goals
 	b) Tipos de data:

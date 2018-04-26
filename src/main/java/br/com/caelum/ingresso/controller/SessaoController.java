@@ -62,6 +62,7 @@ public class SessaoController {
 		}
 		
 		return form(form.getSalaId(), form);
+		//?error=Conflito de horario.\nEsse filme nao pode ser cadastrado nessa sala com esse horario.
 	}
 	
 }

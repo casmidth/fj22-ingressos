@@ -54,6 +54,7 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 		
 - Design Patterns
 	Strategy-> implementa varias funcoes (classes) que podem ser extendidas, mas mantem a funcao que as usa fixa passando uma interface, cuja as classes extensivas implementam
+	Factory-> por exemplo Enum, que estamos usando para converter a string de resposta da UI para uma classe
 	
 - curiosidades
 	a) Maven Mojo -> criador de plugins do Maven, criador de goals
@@ -66,3 +67,7 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 	e) Optional.class -> generics que tem alguns metodos tipo .IsPresent, .get, .orElse ou .ifPresent
 	f) aplicao assincrona e sincrona -> varias execucoes ao mesmo tempo vs uma funcao por vez
 	g) LOG4J -> log assincrono
+	h) Map -> mapear um conjunto de dados para conjuntos menores (afunilando)
+	i) Reduce -> reduzir o conjunto de dados em um so
+	j) Parallel Stream -> java 8 faz a lista toda de processamentos sem ter que configurar
+	k) method reference -> Ingressos.stream().map(Ingresso::getLugar)

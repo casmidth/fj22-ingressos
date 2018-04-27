@@ -19,6 +19,7 @@ import br.com.caelum.ingresso.dao.FilmeDao;
 import br.com.caelum.ingresso.dao.SalaDao;
 import br.com.caelum.ingresso.dao.SessaoDao;
 import br.com.caelum.ingresso.model.ImagemCapa;
+import br.com.caelum.ingresso.model.Sala;
 import br.com.caelum.ingresso.model.Sessao;
 import br.com.caelum.ingresso.model.form.SessaoForm;
 import br.com.caelum.ingresso.rest.ImdbClient;
@@ -80,7 +81,6 @@ public class SessaoController {
 		
 		mav.addObject("sessao", sessao);
 		mav.addObject("imagemCapa", imagemCapa.orElse(new ImagemCapa()));
-		
 		return mav;
 			
 	}

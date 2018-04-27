@@ -9,10 +9,15 @@ public class Ingresso {
 	
 	private Sessao sessao;
 	private BigDecimal preco;
+	private Lugar lugar;
+	private TipoDeIngresso tipoDeIngresso;
 	
-	public Ingresso(Sessao sessao, Desconto desconto){
+	public Ingresso(Sessao sessao, Desconto desconto, TipoDeIngresso tipoDeIngresso, Lugar lugar){
 		this.sessao = sessao;
+		this.tipoDeIngresso = tipoDeIngresso;
 		this.preco = desconto.aplicarDescontoSobre(sessao.getPreco());
+		this.lugar = lugar;
+		
 	}
 	
 	/**
@@ -36,6 +41,23 @@ public class Ingresso {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
+
+	public Lugar getLugar() {
+		return lugar;
+	}
+
+	public void setLugar(Lugar lugar) {
+		this.lugar = lugar;
+	}
+
+	public TipoDeIngresso getTipoDeIngresso() {
+		return tipoDeIngresso;
+	}
+
+	public void setTipoDeIngresso(TipoDeIngresso tipoDeIngresso) {
+		this.tipoDeIngresso = tipoDeIngresso;
+	}
+	
 	
 	
 	

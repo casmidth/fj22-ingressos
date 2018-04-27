@@ -34,7 +34,7 @@ public class FilmeController {
     private SessaoDao sessaoDao;
     
     @Autowired
-    private ImdbClient imdbClient;
+    private ImdbClient imdbRestClient;
     
     
     @GetMapping("/filme/{id}/detalhe")
@@ -43,7 +43,7 @@ public class FilmeController {
     	ModelAndView mav = new ModelAndView("/filme/detalhe");
     	Filme filme = filmeDao.findOne(id);
     	
-    	Optional<DetalhesDoFilme> detalhesDoFilme = imdbClient.request(filme);
+    	Optional<DetalhesDoFilme> detalhesDoFilme = imdbRestClient.request(filme, DetalhesDoFilme.class);
     	List<Sessao> sessoes = sessaoDao.buscaSessaoDoFilme(filme);
     	
     	mav.addObject("sessoes", sessoes);

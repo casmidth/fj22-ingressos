@@ -32,5 +32,8 @@ public class SessaoDao {
 		return manager.createQuery("select f from Sessao f where f.filme = :filme", Sessao.class).setParameter("filme", filme).getResultList();
 	}
 	
+	public Sessao findOne(Integer id){
+		return manager.find(Sessao.class, id);
+	}
 	
 }

@@ -2,8 +2,10 @@ package br.com.caelum.ingresso.controller;
 
 import br.com.caelum.ingresso.dao.FilmeDao;
 import br.com.caelum.ingresso.dao.SessaoDao;
+import br.com.caelum.ingresso.model.DetalhesDoFilme;
 import br.com.caelum.ingresso.model.Filme;
 import br.com.caelum.ingresso.model.Sessao;
+import br.com.caelum.ingresso.rest.ImdbClient;
 
 import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,15 +33,21 @@ public class FilmeController {
     @Autowired
     private SessaoDao sessaoDao;
     
+    @Autowired
+    private ImdbClient imdbClient;
+    
     
     @GetMapping("/filme/{id}/detalhe")
     public ModelAndView detalhes(@PathVariable("id") Integer id){
     	
     	ModelAndView mav = new ModelAndView("/filme/detalhe");
     	Filme filme = filmeDao.findOne(id);
+    	
+    	Optional<DetalhesDoFilme> detalhesDoFilme = imdbClient.request(filme);
     	List<Sessao> sessoes = sessaoDao.buscaSessaoDoFilme(filme);
     	
     	mav.addObject("sessoes", sessoes);
+    	mav.addObject("detalhes", detalhesDoFilme.orElse(new DetalhesDoFilme()));
     	return mav;
     	
     }

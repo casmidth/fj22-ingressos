@@ -1,6 +1,5 @@
 package br.com.caelum.ingresso.controller;
 
-import java.util.Arrays;
 import java.util.List;
 
 import javax.validation.Valid;

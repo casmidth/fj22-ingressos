@@ -63,3 +63,6 @@ Projeto do curso da Caelum fj22 - Desenvolvimento com Spring e teste
 		DataTimeApi (Duration, LocalDate, LocalTime, LocalDateTime)
 	c) SpringData -> tem todos os metodos de CRUD prontos
 	d) DTO -> data transfer object, previde ataques na web (mass assignment)
+	e) Optional.class -> generics que tem alguns metodos tipo .IsPresent, .get, .orElse ou .ifPresent
+	f) aplicao assincrona e sincrona -> varias execucoes ao mesmo tempo vs uma funcao por vez
+	g) LOG4J -> log assincrono

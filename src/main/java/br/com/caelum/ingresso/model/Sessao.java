@@ -20,7 +20,7 @@ import javax.persistence.OneToMany;
 public class Sessao {
  
 	@Id
-	@GeneratedValue()
+	@GeneratedValue
 	private Integer id;
 	private LocalTime horario;
 	@ManyToOne
